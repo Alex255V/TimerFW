@@ -27,7 +27,7 @@ public class TimerForWork {
                 break;
             } catch (Exception e) {
                 System.err.println("input error ");
-                System.out.println("try again inputting only a numbers: ");
+                System.out.print("try again inputting only a numbers: ");
             }
         }
         i = i * 60;
