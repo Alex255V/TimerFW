@@ -1,4 +1,3 @@
-import java.io.IOException;
 import java.util.Scanner;
 import java.util.Timer;
 import java.util.TimerTask;
@@ -22,15 +21,17 @@ public class TimerForWork {
         System.out.print("Enter number in min: ");
         while (true) {
             s = sc.nextLine();
+            if (s.equals("02r")) {  i = 2; break; }
             try {
                 i = Integer.parseInt(s);
+                i = i * 60;
                 break;
             } catch (Exception e) {
                 System.err.println("input error ");
                 System.out.print("try again inputting only a numbers: ");
             }
         }
-        i = i * 60;
+
         timer = new Timer();
         timer.schedule(new Task(), 0,1000);
     }
